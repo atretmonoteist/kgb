@@ -1,0 +1,37 @@
+<%= form_for(@scando) do |f| %>
+  <% if @scando.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scando.errors.count, "error") %> prohibited this scando from being saved:</h2>
+
+      <ul>
+      <% @scando.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :do_name %><br>
+    <%= f.text_field :do_name %>
+  </div>
+  <div class="field">
+    <%= f.label :do_description %><br>
+    <%= f.text_area :do_description %>
+  </div>
+  <div class="field">
+    <%= f.label :do_address %><br>
+    <%= f.text_field :do_address %>
+  </div>
+  <div class="field">
+    <%= f.label :do_phone %><br>
+    <%= f.text_field :do_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :do_fax %><br>
+    <%= f.text_field :do_fax %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

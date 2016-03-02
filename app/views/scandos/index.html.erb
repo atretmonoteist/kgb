@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scandos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Do name</th>
+      <th>Do description</th>
+      <th>Do address</th>
+      <th>Do phone</th>
+      <th>Do fax</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scandos.each do |scando| %>
+      <tr>
+        <td><%= scando.do_name %></td>
+        <td><%= scando.do_description %></td>
+        <td><%= scando.do_address %></td>
+        <td><%= scando.do_phone %></td>
+        <td><%= scando.do_fax %></td>
+        <td><%= link_to 'Show', scando %></td>
+        <td><%= link_to 'Edit', edit_scando_path(scando) %></td>
+        <td><%= link_to 'Destroy', scando, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scando', new_scando_path %>

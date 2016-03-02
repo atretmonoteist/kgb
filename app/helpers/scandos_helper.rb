@@ -1,0 +1,2 @@
+module ScandosHelper
+end

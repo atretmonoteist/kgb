@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Do name:</strong>
+  <%= @scando.do_name %>
+</p>
+
+<p>
+  <strong>Do description:</strong>
+  <%= @scando.do_description %>
+</p>
+
+<p>
+  <strong>Do address:</strong>
+  <%= @scando.do_address %>
+</p>
+
+<p>
+  <strong>Do phone:</strong>
+  <%= @scando.do_phone %>
+</p>
+
+<p>
+  <strong>Do fax:</strong>
+  <%= @scando.do_fax %>
+</p>
+
+<%= link_to 'Edit', edit_scando_path(@scando) %> |
+<%= link_to 'Back', scandos_path %>
